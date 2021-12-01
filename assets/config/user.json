@@ -1,0 +1,26 @@
+{
+  "user": [
+    {
+      "id": 33434,
+      "username": "9898989898",
+      "password": "password123",
+      "name": "Simon Baker",
+      "tournament_played": "34",
+      "tournament_won": "20",
+      "winning_percentage": "65%",
+      "rating": "2250",
+      "profile_image": "https://cdn.game.tv/tournaments/prod/game/8D23B0.png"
+    },
+    {
+      "id": 34533,
+      "username": "9876543210",
+      "password": "password123",
+      "name": "Simon Baker1",
+      "tournament_played": "40",
+      "tournament_won": "30",
+      "winning_percentage": "75%",
+      "rating": "2230",
+      "profile_image": "https://cdn.game.tv/tournaments/prod/game/AF2F98.png"
+    }
+  ]
+}
