@@ -1,10 +1,9 @@
 class TournamentResponseModel {
-  TournamentResponseModel({
-    required this.code,
-    required this.data,
-    required this.success,
-    required this.errorRes
-  });
+  TournamentResponseModel(
+      {required this.code,
+      required this.data,
+      required this.success,
+      required this.errorRes});
 
   late final int code;
   late final Data data;
@@ -16,10 +15,9 @@ class TournamentResponseModel {
     success = json['success'];
     if (success) {
       data = Data.fromJson(json['data']);
-    }else
-      {
-        errorRes = ErrorRes.fromJson(json['data']);
-      }
+    } else {
+      errorRes = ErrorRes.fromJson(json['data']);
+    }
   }
 
   Map<String, dynamic> toJson() {
@@ -31,12 +29,11 @@ class TournamentResponseModel {
   }
 }
 
-class ErrorRes{
+class ErrorRes {
   ErrorRes({required this.errorMsg});
   late final String errorMsg;
   ErrorRes.fromJson(Map<String, dynamic> json) {
     errorMsg = json['error'];
-
   }
 
   Map<String, dynamic> toJson() {
@@ -56,13 +53,13 @@ class Data {
   });
 
   late final String cursor;
-  late final Null tournamentCount;
+  late final dynamic tournamentCount;
   late final List<Tournaments> tournaments;
   late final bool isLastBatch;
 
   Data.fromJson(Map<String, dynamic> json) {
     cursor = json['cursor'];
-    tournamentCount = null;
+    tournamentCount = json['tournament_count'];
     tournaments = List.from(json['tournaments'])
         .map((e) => Tournaments.fromJson(e))
         .toList();
