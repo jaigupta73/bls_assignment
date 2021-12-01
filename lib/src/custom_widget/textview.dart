@@ -37,7 +37,7 @@ class TextView extends StatelessWidget {
         child: Text(
           title,
           overflow: textOverflow,
-          maxLines: this.maxLines,
+          maxLines: maxLines,
           style: textStyle,
           textAlign: textAlign,
         ),
